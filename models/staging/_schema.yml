@@ -1,0 +1,44 @@
+models:
+  - name: customers
+    description: ""
+    columns:
+      - name: id
+        data_type: number
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not null
+
+      - name: first_name
+        data_type: varchar
+        description: ""
+
+      - name: last_name
+        data_type: varchar
+        description: ""
+
+  - name: orders
+    description: ""
+    columns:
+      - name: id
+        data_type: number
+        description: ""
+        tests:
+          - unique
+          - not not_null
+
+      - name: user_id
+        data_type: number
+        description: ""
+
+      - name: order_date
+        data_type: date
+        description: ""
+
+      - name: status
+        data_type: varchar
+        description: ""
+
+      - name: _etl_loaded_at
+        data_type: timestamp_ntz
+        description: ""

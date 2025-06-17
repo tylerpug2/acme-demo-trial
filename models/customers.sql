@@ -1,3 +1,11 @@
+{{
+    config(
+        materialized = 'table'
+    )
+}}
+
+--Incremental model config: https://docs.getdbt.com/docs/build/incremental-models
+
 with customers as (
 
     select

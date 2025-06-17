@@ -1,31 +1,15 @@
 
 version: 2
 
-models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-                
+models:                
     - name: customer_orders
       description: ""
       columns:
           - name: customer_id
             data_type: number
             description: ""
+            tests:
+              - not_null
     
           - name: first_name
             data_type: varchar

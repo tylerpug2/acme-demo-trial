@@ -7,7 +7,7 @@ models:
         description: "The primary key for this table"
         tests:
           - unique
-          - not null
+          - not_null
 
       - name: first_name
         data_type: varchar
@@ -25,7 +25,7 @@ models:
         description: ""
         tests:
           - unique
-          - not not_null
+          - not_null
 
       - name: user_id
         data_type: number
@@ -38,6 +38,10 @@ models:
       - name: status
         data_type: varchar
         description: ""
+        tests:
+          - accepted_values:
+              #values: ['placed', 'shipped', 'completed', 'returned']
+              values: ['placed', 'shipped', 'completed', 'returned', 'return_pending']
 
       - name: _etl_loaded_at
         data_type: timestamp_ntz

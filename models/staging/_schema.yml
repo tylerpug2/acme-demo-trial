@@ -40,8 +40,7 @@ models:
         description: ""
         tests:
           - accepted_values:
-              values: ['placed', 'shipped', 'completed', 'returned']
-              #values: ['placed', 'shipped', 'completed', 'returned', 'return_pending']
+              values: ['placed', 'shipped', 'completed', 'returned', 'return_pending']
 
       - name: _etl_loaded_at
         data_type: timestamp_ntz
